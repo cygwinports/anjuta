@@ -1,0 +1,10 @@
+category: Devel Gnome
+requires: cygwin anjuta GConf2-devel glib2-devel gtk2-x11-devel gnome-vfs2-devel libglade2-devel libgnome2-devel libgnomecanvas2-devel libgnomeui2-devel gettext libxml2-devel
+external-source: anjuta
+sdesc: "GNOME C/C++ IDE (plugin development)"
+ldesc: "Anjuta is a versatile Integrated Development Environment (IDE) 
+for C and C++ on GNU/Linux. It has been written for GTK/GNOME and 
+features a number of advanced programming facilities. These include 
+project management, application wizards, an on-board interactive 
+debugger, and a powerful source editor with source browsing and syntax 
+highlighting."

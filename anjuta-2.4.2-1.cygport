@@ -1,0 +1,26 @@
+inherit gnome2
+
+DESCRIPTION="GNOME C/C++ IDE"
+HOMEPAGE="http://www.anjuta.org/"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+PKG_CONTENTS[0]='--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/glade3/ usr/share/'
+PKG_CONTENTS[1]='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+
+DIFF_EXCLUDES='reference'
+
+# has yet to be ported to libdevhelp 0.20; disabling just spawns devhelp
+CYGCONF_ARGS="
+	--disable-plugin-devhelp
+	--disable-plugin-valgrind
+	--with-apr-config=/usr/bin/apr-1-config
+	--with-apu-config=/usr/bin/apu-1-config
+"
+
+src_install() {
+	cd ${B}
+	cyginstall \
+		anjutadocdir=/usr/share/doc/${P} \
+		anjuta_docdir=/usr/share/doc/${P}
+}
