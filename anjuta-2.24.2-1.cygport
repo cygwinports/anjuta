@@ -3,12 +3,16 @@ inherit gnome2
 DESCRIPTION="GNOME C/C++ IDE"
 HOMEPAGE="http://www.anjuta.org/"
 
-PKG_NAMES="${PN} ${PN}-devel"
-PKG_HINTS="setup devel"
-PKG_CONTENTS[0]='--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/glade3/ usr/share/'
-PKG_CONTENTS[1]='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+PATCH_URI="
+	2.24-glade3-plugin.patch
+	2.24-vpath.patch
+"
 
-DIFF_EXCLUDES='reference'
+PKG_NAMES="${PN} ${PN}-devel glade3-anjuta"
+anjuta_CONTENTS="--exclude=gtk-doc --exclude=glade3 etc/ usr/bin/
+                 usr/lib/anjuta/ usr/share/"
+anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+glade3_anjuta_CONTENTS="usr/lib/glade3/ usr/share/glade3/"
 
 # has yet to be ported to libdevhelp 0.20; disabling just spawns devhelp
 CYGCONF_ARGS="

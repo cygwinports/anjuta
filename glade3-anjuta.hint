@@ -1,6 +1,7 @@
 category: Devel Gnome
-requires: cygwin devhelp GConf2 gdl1 glade3 glib2 gtk2-x11 gnome-build gnome-vfs2 gtksourceview2 libX11_6 libapr1 libbonoboui2 libglade2 libgnome2 libgnomecanvas2 libgnomeprint22 libgnomeprintui22 libgnomeui2 libgraphviz4 libintl8 libpcre0 libxml2 libxslt pango subversion vte
-sdesc: "GNOME C/C++ IDE"
+requires: cygwin anjuta glade3
+external-source: anjuta
+sdesc: "GNOME C/C++ IDE (Glade-3 plugin)"
 ldesc: "Anjuta is a versatile Integrated Development Environment (IDE) 
 for C and C++ on GNU/Linux. It has been written for GTK/GNOME and 
 features a number of advanced programming facilities. These include 
