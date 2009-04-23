@@ -7,52 +7,52 @@ management, application wizards, an on-board interactive debugger, and a
 powerful source editor with source browsing and syntax highlighting.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  devhelp-0.22-1
-  libapr1-1.3.3-1
-  libbonoboui2_0-2.24.0-1
-  libcairo2-1.8.4-1
-  libgbf1_2-2.24.1-1
-  libgconf2_4-2.24.0-1
-  libgdk_pixbuf2.0_0-2.14.5-1
-  libgdl1_0-2.24.0-1
-  libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.3-1
-  libgnome2_0-2.24.1-1
-  libgnomecanvas2_0-2.20.1.1-2
-  libgnomeui2_0-2.24.0-1
-  libgnomevfs2_0-2.24.0-1
-  libgraphviz4-2.20.3-1
-  libgtk2.0_0-2.14.5-1
-  libgtksourceview2.0_0-2.4.1-1
-  libintl8-0.17-2
-  libpango1.0_0-1.22.3-1
-  libvte9-0.17.4-1
-  libX11_6-1.1.5-1
-  libxml2-2.6.32-2
-  libxslt-1.1.24-2
-  subversion-1.5.4-1
-(glade3-anjuta)
-  glade3-3.4.5-1
+  cygwin-1.7.0-45
+  autogen-5.9.7-1
+  libapr1-1.3.3-4
+  libcairo2-1.8.6-10
+  libdevhelp1_0-0.23-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgda4.0_4-4.0.2-1
+  libgdk_pixbuf2.0_0-2.16.0-1
+  libgdl1_0-2.26.0-1
+  libglade2.0_0-2.6.4-1
+  libgladeui1_9-3.6.0-1
+  libglib2.0_0-2.20.0-1
+  libgnome2_0-2.26.0-1
+  libgnomeui2_0-2.24.1-1
+  libgtk2.0_0-2.16.0-1
+  libgtksourceview2.0_0-2.6.0-1
+  libintl8-0.17-10
+  libpango1.0_0-1.24.0-1
+  libstdc++6-4.3.2-2
+  libunique1.0_0-1.0.8-1
+  libvte9-0.20.0-1
+  libwebkit1.0_2-1.1.3-1
+  libxml2-2.7.3-10
+  libxslt-1.1.24-10
+  perl-5.10.0-5
+  perl-Locale-gettext-1.05-10
+  subversion-1.6.1-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  gnome-common-2.24.0-1
-  gnome-doc-utils-0.14.0-1
-  gtk-doc-1.11-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
-  perl-5.10.0-5
-  pkg-config-0.23a-2
-  rarian-0.8.1-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  gnome-common-2.26.0-1
+  gnome-doc-utils-0.16.0-1
+  gtk-doc-1.11-2
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical website:
@@ -64,17 +64,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack anjuta-2.24.2-X-src.tar.bz2
+  unpack anjuta-2.26.1.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./anjuta-2.24.2-X.cygport all
+  cygport ./anjuta-2.26.1.0-X.cygport all
 
 This will create:
-  /usr/src/anjuta-2.24.2-X-src.tar.bz2
-  /usr/src/anjuta-2.24.2-X.tar.bz2
-  /usr/src/anjuta-devel-2.24.2-X.tar.bz2
-  /usr/src/glade3-anjuta-2.24.2-X.tar.bz2
+  /usr/src/anjuta-2.26.1.0-X-src.tar.bz2
+  /usr/src/anjuta-2.26.1.0-X.tar.bz2
+  /usr/src/anjuta-devel-2.26.1.0-X.tar.bz2
 
 -------------------------------------------
 
@@ -84,26 +83,27 @@ Files included in the binary packages:
   /etc/gconf/schemas/anjuta-build-basic-autotools-plugin.schemas
   /etc/gconf/schemas/anjuta-cvs-plugin.schemas
   /etc/gconf/schemas/anjuta-document-manager.schemas
+  /etc/gconf/schemas/anjuta-editor-scintilla.schemas
   /etc/gconf/schemas/anjuta-editor-sourceview.schemas
   /etc/gconf/schemas/anjuta-language-cpp-java.schemas
   /etc/gconf/schemas/anjuta-message-manager-plugin.schemas
-  /etc/gconf/schemas/anjuta-symbol-browser-plugin.schemas
+  /etc/gconf/schemas/anjuta-symbol-db.schemas
   /etc/gconf/schemas/anjuta-terminal-plugin.schemas
   /etc/gconf/schemas/anjuta.schemas
   /etc/postinstall/anjuta.sh
   /etc/preremove/anjuta.sh
   /usr/bin/anjuta.exe
-  /usr/bin/anjuta_import.sh
   /usr/bin/anjuta_launcher.exe
   /usr/bin/cyganjuta-0.dll
-  /usr/bin/cyganjuta-ctags-0.dll
+  /usr/bin/gbf-am-parse
+  /usr/bin/gbf-mkfile-parse
   /usr/lib/anjuta/anjuta-build-basic-autotools.plugin
   /usr/lib/anjuta/anjuta-class-gen.plugin
-  /usr/lib/anjuta/anjuta-class-inheritance.plugin
   /usr/lib/anjuta/anjuta-cvs.plugin
   /usr/lib/anjuta/anjuta-debug-manager.plugin
   /usr/lib/anjuta/anjuta-devhelp.plugin
   /usr/lib/anjuta/anjuta-document-manager.plugin
+  /usr/lib/anjuta/anjuta-editor.plugin
   /usr/lib/anjuta/anjuta-file-wizard.plugin
   /usr/lib/anjuta/anjuta-gdb.plugin
   /usr/lib/anjuta/anjuta-glade.plugin
@@ -120,18 +120,17 @@ Files included in the binary packages:
   /usr/lib/anjuta/anjuta-sample.plugin
   /usr/lib/anjuta/anjuta-scratchbox.plugin
   /usr/lib/anjuta/anjuta-search.plugin
+  /usr/lib/anjuta/anjuta-starter.plugin
   /usr/lib/anjuta/anjuta-subversion.plugin
-  /usr/lib/anjuta/anjuta-symbol-browser.plugin
-  /usr/lib/anjuta/anjuta-tags.exe
   /usr/lib/anjuta/anjuta-terminal.plugin
   /usr/lib/anjuta/anjuta-tools.plugin
   /usr/lib/anjuta/cyganjuta-build-basic-autotools.dll
   /usr/lib/anjuta/cyganjuta-class-gen.dll
-  /usr/lib/anjuta/cyganjuta-class-inheritance.dll
   /usr/lib/anjuta/cyganjuta-cvs-plugin.dll
   /usr/lib/anjuta/cyganjuta-debug-manager.dll
   /usr/lib/anjuta/cyganjuta-devhelp.dll
   /usr/lib/anjuta/cyganjuta-document-manager.dll
+  /usr/lib/anjuta/cyganjuta-editor.dll
   /usr/lib/anjuta/cyganjuta-file-wizard.dll
   /usr/lib/anjuta/cyganjuta-gdb.dll
   /usr/lib/anjuta/cyganjuta-git.dll
@@ -151,21 +150,27 @@ Files included in the binary packages:
   /usr/lib/anjuta/cyganjuta-scratchbox.dll
   /usr/lib/anjuta/cyganjuta-search.dll
   /usr/lib/anjuta/cyganjuta-sourceview.dll
+  /usr/lib/anjuta/cyganjuta-starter.dll
   /usr/lib/anjuta/cyganjuta-subversion.dll
-  /usr/lib/anjuta/cyganjuta-symbol-browser.dll
+  /usr/lib/anjuta/cyganjuta-symbol-db.dll
   /usr/lib/anjuta/cyganjuta-terminal.dll
   /usr/lib/anjuta/cyganjuta-tools.dll
+  /usr/lib/anjuta/cygfile-manager.dll
+  /usr/lib/anjuta/cyggbf-am.dll
+  /usr/lib/anjuta/cyggbf-mkfile.dll
   /usr/lib/anjuta/cyglanguage-manager.dll
   /usr/lib/anjuta/file-manager.plugin
+  /usr/lib/anjuta/gbf-am.plugin
+  /usr/lib/anjuta/gbf-mkfile.plugin
   /usr/lib/anjuta/git.plugin
   /usr/lib/anjuta/language-manager.plugin
   /usr/lib/anjuta/libanjuta-build-basic-autotools.la
   /usr/lib/anjuta/libanjuta-class-gen.la
-  /usr/lib/anjuta/libanjuta-class-inheritance.la
   /usr/lib/anjuta/libanjuta-cvs-plugin.la
   /usr/lib/anjuta/libanjuta-debug-manager.la
   /usr/lib/anjuta/libanjuta-devhelp.la
   /usr/lib/anjuta/libanjuta-document-manager.la
+  /usr/lib/anjuta/libanjuta-editor.la
   /usr/lib/anjuta/libanjuta-file-wizard.la
   /usr/lib/anjuta/libanjuta-gdb.la
   /usr/lib/anjuta/libanjuta-git.la
@@ -185,16 +190,24 @@ Files included in the binary packages:
   /usr/lib/anjuta/libanjuta-scratchbox.la
   /usr/lib/anjuta/libanjuta-search.la
   /usr/lib/anjuta/libanjuta-sourceview.la
+  /usr/lib/anjuta/libanjuta-starter.la
   /usr/lib/anjuta/libanjuta-subversion.la
-  /usr/lib/anjuta/libanjuta-symbol-browser.la
+  /usr/lib/anjuta/libanjuta-symbol-db.la
   /usr/lib/anjuta/libanjuta-terminal.la
   /usr/lib/anjuta/libanjuta-tools.la
-  /usr/lib/anjuta/libfile-manager.a
   /usr/lib/anjuta/libfile-manager.la
+  /usr/lib/anjuta/libgbf-am.la
+  /usr/lib/anjuta/libgbf-mkfile.la
   /usr/lib/anjuta/liblanguage-manager.la
   /usr/lib/anjuta/profiler.plugin
   /usr/lib/anjuta/sourceview.plugin
+  /usr/lib/anjuta/symbol-db.plugin
+  /usr/lib/glade3/modules/cyggladeanjuta.dll
+  /usr/lib/glade3/modules/libgladeanjuta.la
   /usr/share/anjuta/AUTHORS
+  /usr/share/anjuta/GBF/AmFiles.pm
+  /usr/share/anjuta/GBF/General.pm
+  /usr/share/anjuta/GBF/Make.pm
   /usr/share/anjuta/anjuta_project.template
   /usr/share/anjuta/build/automake-c.filters
   /usr/share/anjuta/class-templates/cc-header.tpl
@@ -207,25 +220,30 @@ Files included in the binary packages:
   /usr/share/anjuta/glade/anjuta-cvs-plugin.glade
   /usr/share/anjuta/glade/anjuta-debug-manager.glade
   /usr/share/anjuta/glade/anjuta-document-manager.glade
+  /usr/share/anjuta/glade/anjuta-editor-scintilla.glade
   /usr/share/anjuta/glade/anjuta-editor-sourceview.glade
   /usr/share/anjuta/glade/anjuta-file-wizard.glade
   /usr/share/anjuta/glade/anjuta-gdb.glade
   /usr/share/anjuta/glade/anjuta-git.glade
+  /usr/share/anjuta/glade/anjuta-glade.glade
   /usr/share/anjuta/glade/anjuta-language-cpp-java.glade
   /usr/share/anjuta/glade/anjuta-macro.glade
   /usr/share/anjuta/glade/anjuta-message-manager-plugin.glade
-  /usr/share/anjuta/glade/anjuta-project-wizard.glade
+  /usr/share/anjuta/glade/anjuta-project-wizard.ui
   /usr/share/anjuta/glade/anjuta-run-program.glade
+  /usr/share/anjuta/glade/anjuta-scratchbox-panel.png
   /usr/share/anjuta/glade/anjuta-scratchbox.glade
   /usr/share/anjuta/glade/anjuta-search.glade
   /usr/share/anjuta/glade/anjuta-subversion.glade
-  /usr/share/anjuta/glade/anjuta-symbol-browser-plugin.glade
+  /usr/share/anjuta/glade/anjuta-symbol-db.glade
   /usr/share/anjuta/glade/anjuta-terminal-plugin.glade
   /usr/share/anjuta/glade/anjuta-tools.glade
   /usr/share/anjuta/glade/anjuta.glade
   /usr/share/anjuta/glade/applogo.png
   /usr/share/anjuta/glade/appwizard.png
+  /usr/share/anjuta/glade/create_dialogs.glade
   /usr/share/anjuta/glade/file-manager.glade
+  /usr/share/anjuta/glade/gbf-am-dialogs.glade
   /usr/share/anjuta/glade/patch-plugin.glade
   /usr/share/anjuta/glade/profiler-call-graph.glade
   /usr/share/anjuta/glade/profiler-flat-profile.glade
@@ -234,6 +252,7 @@ Files included in the binary packages:
   /usr/share/anjuta/glade/start-with-import.png
   /usr/share/anjuta/glade/start-with-open.png
   /usr/share/anjuta/glade/start-with-wizard.png
+  /usr/share/anjuta/gtodo/gtodo-plain.xsl
   /usr/share/anjuta/gtodo/gtodo.css
   /usr/share/anjuta/gtodo/gtodo.xsl
   /usr/share/anjuta/languages.xml
@@ -270,14 +289,16 @@ Files included in the binary packages:
   /usr/share/anjuta/project/gcj.wiz
   /usr/share/anjuta/project/gcj/configure.ac.tpl
   /usr/share/anjuta/project/gcj/src/Makefile.am.tpl
+  /usr/share/anjuta/project/gnome-applet.wiz
+  /usr/share/anjuta/project/gnome-applet/HACKING
+  /usr/share/anjuta/project/gnome-applet/Makefile.am.tpl
+  /usr/share/anjuta/project/gnome-applet/autogen.sh
+  /usr/share/anjuta/project/gnome-applet/configure.ac.tpl
+  /usr/share/anjuta/project/gnome-applet/src/GNOME_Applet.server.in.in
+  /usr/share/anjuta/project/gnome-applet/src/Makefile.am.tpl
+  /usr/share/anjuta/project/gnome-applet/src/main.c
   /usr/share/anjuta/project/gnome-logo.png
-  /usr/share/anjuta/project/gnome.wiz
   /usr/share/anjuta/project/gnome/po/POTFILES.in
-  /usr/share/anjuta/project/gnome/src/Makefile.am.tpl
-  /usr/share/anjuta/project/gnome/src/callbacks.c
-  /usr/share/anjuta/project/gnome/src/callbacks.h
-  /usr/share/anjuta/project/gnome/src/main.c
-  /usr/share/anjuta/project/gnome/src/project.glade
   /usr/share/anjuta/project/gtk-logo.png
   /usr/share/anjuta/project/gtk.wiz
   /usr/share/anjuta/project/gtk/po/POTFILES.in
@@ -303,6 +324,7 @@ Files included in the binary packages:
   /usr/share/anjuta/project/licenses/GPL
   /usr/share/anjuta/project/licenses/LGPL
   /usr/share/anjuta/project/licenses/None
+  /usr/share/anjuta/project/m4/as-ac-expand.m4
   /usr/share/anjuta/project/minimal.wiz
   /usr/share/anjuta/project/minimal/Makefile.am.tpl
   /usr/share/anjuta/project/minimal/autogen.sh
@@ -365,7 +387,10 @@ Files included in the binary packages:
   /usr/share/anjuta/project/xlib/po/POTFILES.in
   /usr/share/anjuta/project/xlib/src/Makefile.am.tpl
   /usr/share/anjuta/project/xlib/src/main.c
-  /usr/share/anjuta/scripts/create_global_tags.sh
+  /usr/share/anjuta/properties/anjuta.properties
+  /usr/share/anjuta/properties/styles.properties
+  /usr/share/anjuta/properties/user.properties
+  /usr/share/anjuta/tables.sql
   /usr/share/anjuta/tools/find-fixmes.pl
   /usr/share/anjuta/tools/prepare-changelog.pl
   /usr/share/anjuta/tools/tools-2.xml
@@ -389,7 +414,7 @@ Files included in the binary packages:
   /usr/share/anjuta/ui/anjuta-sample.ui
   /usr/share/anjuta/ui/anjuta-search.ui
   /usr/share/anjuta/ui/anjuta-subversion.ui
-  /usr/share/anjuta/ui/anjuta-symbol-browser-plugin.ui
+  /usr/share/anjuta/ui/anjuta-symbol-db-plugin.ui
   /usr/share/anjuta/ui/anjuta-terminal-plugin.ui
   /usr/share/anjuta/ui/anjuta-tools.ui
   /usr/share/anjuta/ui/anjuta.ui
@@ -397,19 +422,32 @@ Files included in the binary packages:
   /usr/share/anjuta/ui/profiler.ui
   /usr/share/anjuta/welcome.txt
   /usr/share/applications/anjuta.desktop
-  /usr/share/doc/anjuta-2.24.2/ABOUT-NLS
-  /usr/share/doc/anjuta-2.24.2/AUTHORS
-  /usr/share/doc/anjuta-2.24.2/COPYING
-  /usr/share/doc/anjuta-2.24.2/ChangeLog
-  /usr/share/doc/anjuta-2.24.2/FUTURE
-  /usr/share/doc/anjuta-2.24.2/INSTALL
-  /usr/share/doc/anjuta-2.24.2/MAINTAINERS
-  /usr/share/doc/anjuta-2.24.2/NEWS
-  /usr/share/doc/anjuta-2.24.2/README
-  /usr/share/doc/anjuta-2.24.2/ROADMAP
-  /usr/share/doc/anjuta-2.24.2/ScintillaDoc.html
-  /usr/share/doc/anjuta-2.24.2/THANKS
-  /usr/share/doc/anjuta-2.24.2/TODO
+  /usr/share/doc/anjuta/AUTHORS
+  /usr/share/doc/anjuta/COPYING
+  /usr/share/doc/anjuta/ChangeLog
+  /usr/share/doc/anjuta/FUTURE
+  /usr/share/doc/anjuta/INSTALL
+  /usr/share/doc/anjuta/MAINTAINERS
+  /usr/share/doc/anjuta/NEWS
+  /usr/share/doc/anjuta/README
+  /usr/share/doc/anjuta/ROADMAP
+  /usr/share/doc/anjuta/ScintillaDoc.html
+  /usr/share/doc/anjuta/THANKS
+  /usr/share/doc/anjuta/TODO
+  /usr/share/glade3/catalogs/anjuta-glade.xml
+  /usr/share/gnome/help/anjuta-build-tutorial/C/anjuta-build-tutorial.xml
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/autotools-process.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/build_preferences.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/compilation-stages.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/configure-dialog.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/configure-process.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/library-add-pkgconfig.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/library-add-properties.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/new-project-basic.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/new-project-message.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/new-project-options.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/new-project-select.png
+  /usr/share/gnome/help/anjuta-build-tutorial/C/figures/new-project-summary.png
   /usr/share/gnome/help/anjuta-faqs/C/anjuta-faqs.xml
   /usr/share/gnome/help/anjuta-faqs/C/legal.xml
   /usr/share/gnome/help/anjuta-manual/C/anjuta-manual.xml
@@ -439,7 +477,10 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/C/figures/print_dlg.png
   /usr/share/gnome/help/anjuta-manual/C/figures/print_preview.png
   /usr/share/gnome/help/anjuta-manual/C/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/C/figures/project_group.png
   /usr/share/gnome/help/anjuta-manual/C/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/C/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/C/figures/project_target_details.png
   /usr/share/gnome/help/anjuta-manual/C/figures/registers.png
   /usr/share/gnome/help/anjuta-manual/C/figures/save_as_file.png
   /usr/share/gnome/help/anjuta-manual/C/figures/search_expr.png
@@ -456,6 +497,7 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/C/figures/symbol_browser.png
   /usr/share/gnome/help/anjuta-manual/C/figures/tool-editor.png
   /usr/share/gnome/help/anjuta-manual/C/fileoperations.xml
+  /usr/share/gnome/help/anjuta-manual/C/glade.xml
   /usr/share/gnome/help/anjuta-manual/C/interface.xml
   /usr/share/gnome/help/anjuta-manual/C/introduction.xml
   /usr/share/gnome/help/anjuta-manual/C/legal.xml
@@ -464,6 +506,92 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/C/projects.xml
   /usr/share/gnome/help/anjuta-manual/C/template.xml
   /usr/share/gnome/help/anjuta-manual/C/tools.xml
+  /usr/share/gnome/help/anjuta-manual/de/anjuta-manual.xml
+  /usr/share/gnome/help/anjuta-manual/de/figures/add_edit_macro.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/anjuta-in-action.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/attach.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/brk_add.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/brk_dlg.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/configure_dlg.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/display_macro.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/editor_guides.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/editor_margins.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/editor_markers.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/file_menu.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/insert_text.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/keyword_macro.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/local_variables.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/menubar.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/message_win.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/new_file_wizard.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/open_file.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/open_file_multiple.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/prefs_print.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/print_dlg.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/print_preview.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/project_group.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/project_target_details.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/registers.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/save_as_file.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_expr.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_expr_basic.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_file_pattern.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_replace.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_setting.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_target.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_target_action.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/search_target_in.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/sharedlibs.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/signals.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/stack.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/symbol_browser.png
+  /usr/share/gnome/help/anjuta-manual/de/figures/tool-editor.png
+  /usr/share/gnome/help/anjuta-manual/el/anjuta-manual.xml
+  /usr/share/gnome/help/anjuta-manual/el/figures/add_edit_macro.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/anjuta-in-action.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/attach.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/brk_add.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/brk_dlg.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/configure_dlg.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/display_macro.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/editor_guides.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/editor_margins.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/editor_markers.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/file_menu.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/insert_text.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/keyword_macro.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/local_variables.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/menubar.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/message_win.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/new_file_wizard.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/open_file.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/open_file_multiple.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/prefs_print.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/print_dlg.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/print_preview.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/project_group.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/project_target_details.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/registers.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/save_as_file.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_expr.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_expr_basic.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_file_pattern.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_replace.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_setting.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_target.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_target_action.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/search_target_in.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/sharedlibs.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/signals.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/stack.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/symbol_browser.png
+  /usr/share/gnome/help/anjuta-manual/el/figures/tool-editor.png
   /usr/share/gnome/help/anjuta-manual/es/anjuta-manual.xml
   /usr/share/gnome/help/anjuta-manual/es/figures/add_edit_macro.png
   /usr/share/gnome/help/anjuta-manual/es/figures/anjuta-in-action.png
@@ -488,7 +616,10 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/es/figures/print_dlg.png
   /usr/share/gnome/help/anjuta-manual/es/figures/print_preview.png
   /usr/share/gnome/help/anjuta-manual/es/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/es/figures/project_group.png
   /usr/share/gnome/help/anjuta-manual/es/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/es/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/es/figures/project_target_details.png
   /usr/share/gnome/help/anjuta-manual/es/figures/registers.png
   /usr/share/gnome/help/anjuta-manual/es/figures/save_as_file.png
   /usr/share/gnome/help/anjuta-manual/es/figures/search_expr.png
@@ -504,6 +635,49 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/es/figures/stack.png
   /usr/share/gnome/help/anjuta-manual/es/figures/symbol_browser.png
   /usr/share/gnome/help/anjuta-manual/es/figures/tool-editor.png
+  /usr/share/gnome/help/anjuta-manual/eu/anjuta-manual.xml
+  /usr/share/gnome/help/anjuta-manual/eu/figures/add_edit_macro.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/anjuta-in-action.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/attach.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/brk_add.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/brk_dlg.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/configure_dlg.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/display_macro.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/editor_guides.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/editor_margins.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/editor_markers.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/file_menu.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/insert_text.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/keyword_macro.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/local_variables.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/menubar.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/message_win.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/new_file_wizard.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/open_file.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/open_file_multiple.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/prefs_print.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/print_dlg.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/print_preview.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/project_group.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/project_target_details.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/registers.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/save_as_file.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_expr.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_expr_basic.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_file_pattern.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_replace.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_setting.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_target.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_target_action.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/search_target_in.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/sharedlibs.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/signals.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/stack.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/symbol_browser.png
+  /usr/share/gnome/help/anjuta-manual/eu/figures/tool-editor.png
   /usr/share/gnome/help/anjuta-manual/oc/anjuta-manual.xml
   /usr/share/gnome/help/anjuta-manual/oc/figures/add_edit_macro.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/anjuta-in-action.png
@@ -528,7 +702,10 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/oc/figures/print_dlg.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/print_preview.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/oc/figures/project_group.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/oc/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/oc/figures/project_target_details.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/registers.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/save_as_file.png
   /usr/share/gnome/help/anjuta-manual/oc/figures/search_expr.png
@@ -568,7 +745,10 @@ Files included in the binary packages:
   /usr/share/gnome/help/anjuta-manual/sv/figures/print_dlg.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/print_preview.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/project-window.png
+  /usr/share/gnome/help/anjuta-manual/sv/figures/project_group.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/project_info.png
+  /usr/share/gnome/help/anjuta-manual/sv/figures/project_target.png
+  /usr/share/gnome/help/anjuta-manual/sv/figures/project_target_details.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/registers.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/save_as_file.png
   /usr/share/gnome/help/anjuta-manual/sv/figures/search_expr.png
@@ -602,6 +782,7 @@ Files included in the binary packages:
   /usr/share/locale/en_CA/LC_MESSAGES/anjuta.mo
   /usr/share/locale/en_GB/LC_MESSAGES/anjuta.mo
   /usr/share/locale/es/LC_MESSAGES/anjuta.mo
+  /usr/share/locale/eu/LC_MESSAGES/anjuta.mo
   /usr/share/locale/fi/LC_MESSAGES/anjuta.mo
   /usr/share/locale/fr/LC_MESSAGES/anjuta.mo
   /usr/share/locale/ga/LC_MESSAGES/anjuta.mo
@@ -617,6 +798,7 @@ Files included in the binary packages:
   /usr/share/locale/kn/LC_MESSAGES/anjuta.mo
   /usr/share/locale/ko/LC_MESSAGES/anjuta.mo
   /usr/share/locale/lt/LC_MESSAGES/anjuta.mo
+  /usr/share/locale/lv/LC_MESSAGES/anjuta.mo
   /usr/share/locale/mk/LC_MESSAGES/anjuta.mo
   /usr/share/locale/ml/LC_MESSAGES/anjuta.mo
   /usr/share/locale/mr/LC_MESSAGES/anjuta.mo
@@ -625,6 +807,7 @@ Files included in the binary packages:
   /usr/share/locale/ne/LC_MESSAGES/anjuta.mo
   /usr/share/locale/nl/LC_MESSAGES/anjuta.mo
   /usr/share/locale/oc/LC_MESSAGES/anjuta.mo
+  /usr/share/locale/or/LC_MESSAGES/anjuta.mo
   /usr/share/locale/pa/LC_MESSAGES/anjuta.mo
   /usr/share/locale/pl/LC_MESSAGES/anjuta.mo
   /usr/share/locale/pt/LC_MESSAGES/anjuta.mo
@@ -638,6 +821,7 @@ Files included in the binary packages:
   /usr/share/locale/sr/LC_MESSAGES/anjuta.mo
   /usr/share/locale/sr@latin/LC_MESSAGES/anjuta.mo
   /usr/share/locale/sv/LC_MESSAGES/anjuta.mo
+  /usr/share/locale/te/LC_MESSAGES/anjuta.mo
   /usr/share/locale/th/LC_MESSAGES/anjuta.mo
   /usr/share/locale/tr/LC_MESSAGES/anjuta.mo
   /usr/share/locale/uk/LC_MESSAGES/anjuta.mo
@@ -649,7 +833,10 @@ Files included in the binary packages:
   /usr/share/man/man1/anjuta_launcher.1.gz
   /usr/share/mime/packages/anjuta.xml
   /usr/share/omf/anjuta-manual/anjuta-manual-C.omf
+  /usr/share/omf/anjuta-manual/anjuta-manual-de.omf
+  /usr/share/omf/anjuta-manual/anjuta-manual-el.omf
   /usr/share/omf/anjuta-manual/anjuta-manual-es.omf
+  /usr/share/omf/anjuta-manual/anjuta-manual-eu.omf
   /usr/share/omf/anjuta-manual/anjuta-manual-oc.omf
   /usr/share/omf/anjuta-manual/anjuta-manual-sv.omf
   /usr/share/pixmaps/anjuta/anjuta-attach-16.png
@@ -679,10 +866,10 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/anjuta-breakpoint-enabled-16.png
   /usr/share/pixmaps/anjuta/anjuta-breakpoint-toggle-16.png
   /usr/share/pixmaps/anjuta/anjuta-breakpoint-toggle-24.png
+  /usr/share/pixmaps/anjuta/anjuta-build-16.png
+  /usr/share/pixmaps/anjuta/anjuta-build-24.png
   /usr/share/pixmaps/anjuta/anjuta-build-basic-autotools-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-build-basic-autotools-plugin.svg
-  /usr/share/pixmaps/anjuta/anjuta-class-inheritance-plugin-48.png
-  /usr/share/pixmaps/anjuta/anjuta-class-inheritance-plugin.svg
   /usr/share/pixmaps/anjuta/anjuta-complete-16.png
   /usr/share/pixmaps/anjuta/anjuta-complete-24.png
   /usr/share/pixmaps/anjuta/anjuta-complete-auto-16.png
@@ -695,6 +882,8 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/anjuta-devhelp-plugin.svg
   /usr/share/pixmaps/anjuta/anjuta-document-manager-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-document-manager-plugin.svg
+  /usr/share/pixmaps/anjuta/anjuta-editor-scintilla-plugin-48.png
+  /usr/share/pixmaps/anjuta/anjuta-editor-scintilla-plugin.svg
   /usr/share/pixmaps/anjuta/anjuta-editor-sourceview-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-file-manager-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-file-manager-plugin.svg
@@ -709,20 +898,12 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/anjuta-git-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-glade-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-glade-plugin.svg
-  /usr/share/pixmaps/anjuta/anjuta-go-help-next-16.png
-  /usr/share/pixmaps/anjuta/anjuta-go-help-next-24.png
-  /usr/share/pixmaps/anjuta/anjuta-go-help-prev-16.png
-  /usr/share/pixmaps/anjuta/anjuta-go-help-prev-24.png
   /usr/share/pixmaps/anjuta/anjuta-go-history-next-16.png
   /usr/share/pixmaps/anjuta/anjuta-go-history-next-24.png
   /usr/share/pixmaps/anjuta/anjuta-go-history-prev-16.png
   /usr/share/pixmaps/anjuta/anjuta-go-history-prev-24.png
   /usr/share/pixmaps/anjuta/anjuta-go-line-16.png
   /usr/share/pixmaps/anjuta/anjuta-go-line-24.png
-  /usr/share/pixmaps/anjuta/anjuta-go-match-next-16.png
-  /usr/share/pixmaps/anjuta/anjuta-go-match-next-24.png
-  /usr/share/pixmaps/anjuta/anjuta-go-match-prev-16.png
-  /usr/share/pixmaps/anjuta/anjuta-go-match-prev-24.png
   /usr/share/pixmaps/anjuta/anjuta-go-message-next-16.png
   /usr/share/pixmaps/anjuta/anjuta-go-message-next-24.png
   /usr/share/pixmaps/anjuta/anjuta-go-message-prev-16.png
@@ -775,8 +956,7 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/anjuta-subversion-plugin.svg
   /usr/share/pixmaps/anjuta/anjuta-swap-16.png
   /usr/share/pixmaps/anjuta/anjuta-swap-24.png
-  /usr/share/pixmaps/anjuta/anjuta-symbol-browser-plugin-48.png
-  /usr/share/pixmaps/anjuta/anjuta-symbol-browser-plugin.svg
+  /usr/share/pixmaps/anjuta/anjuta-symbol-db-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-terminal-plugin-48.png
   /usr/share/pixmaps/anjuta/anjuta-terminal-plugin.svg
   /usr/share/pixmaps/anjuta/anjuta-tools-plugin-48.png
@@ -798,14 +978,19 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/element-event-16.png
   /usr/share/pixmaps/anjuta/element-field-16.png
   /usr/share/pixmaps/anjuta/element-interface-16.png
+  /usr/share/pixmaps/anjuta/element-interface-24.png
   /usr/share/pixmaps/anjuta/element-literal-16.png
   /usr/share/pixmaps/anjuta/element-method-16.png
+  /usr/share/pixmaps/anjuta/element-method-24.png
   /usr/share/pixmaps/anjuta/element-namespace-16.png
   /usr/share/pixmaps/anjuta/element-property-16.png
   /usr/share/pixmaps/anjuta/element-structure-16.png
+  /usr/share/pixmaps/anjuta/gbf-am-plugin-48.png
+  /usr/share/pixmaps/anjuta/gbf-build.png
+  /usr/share/pixmaps/anjuta/gbf-install.png
+  /usr/share/pixmaps/anjuta/gbf-mkfile-plugin-48.png
   /usr/share/pixmaps/anjuta/gtodo-about.png
   /usr/share/pixmaps/anjuta/gtodo-edit.png
-  /usr/share/pixmaps/anjuta/gtodo_tray.png
   /usr/share/pixmaps/anjuta/locals.png
   /usr/share/pixmaps/anjuta/madeinanjuta.xcf
   /usr/share/pixmaps/anjuta/password.png
@@ -813,9 +998,18 @@ Files included in the binary packages:
   /usr/share/pixmaps/anjuta/preferences-editor.png
   /usr/share/pixmaps/anjuta/stack.png
   /usr/share/pixmaps/anjuta/start-with-import.png
+  /usr/share/pixmaps/anjuta/starter_logo.png
+  /usr/share/pixmaps/anjuta/vcs-added.png
+  /usr/share/pixmaps/anjuta/vcs-conflict.png
+  /usr/share/pixmaps/anjuta/vcs-deleted.png
+  /usr/share/pixmaps/anjuta/vcs-ignored.png
+  /usr/share/pixmaps/anjuta/vcs-modified.png
+  /usr/share/pixmaps/anjuta/vcs-unversioned.png
+  /usr/share/pixmaps/anjuta/vcs-updated.png
 
 (anjuta-devel)
   /usr/include/libanjuta-1.0/libanjuta/anjuta-async-command.h
+  /usr/include/libanjuta-1.0/libanjuta/anjuta-async-notify.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-command.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-convert.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-debug.h
@@ -842,8 +1036,9 @@ Files included in the binary packages:
   /usr/include/libanjuta-1.0/libanjuta/anjuta-ui.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-utils.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-vcs-status-tree-view.h
+  /usr/include/libanjuta-1.0/libanjuta/anjuta-vcs-status.h
   /usr/include/libanjuta-1.0/libanjuta/anjuta-version.h
-  /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-bookmark.h
+  /usr/include/libanjuta-1.0/libanjuta/gbf-project.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-buildable.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-builder.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-debug-manager.h
@@ -890,6 +1085,7 @@ Files included in the binary packages:
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-plugin-factory.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-preferences.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-print.h
+  /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-project-backend.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-project-manager.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-stream-loader.h
   /usr/include/libanjuta-1.0/libanjuta/interfaces/ianjuta-stream-savable.h
@@ -905,8 +1101,6 @@ Files included in the binary packages:
   /usr/include/libanjuta-1.0/libanjuta/interfaces/libanjuta.idl
   /usr/include/libanjuta-1.0/libanjuta/libanjuta.h
   /usr/include/libanjuta-1.0/libanjuta/resources.h
-  /usr/lib/libanjuta-ctags.dll.a
-  /usr/lib/libanjuta-ctags.la
   /usr/lib/libanjuta.dll.a
   /usr/lib/libanjuta.la
   /usr/lib/pkgconfig/libanjuta-1.0.pc
@@ -933,6 +1127,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libanjuta/anjuta-architecture.html
   /usr/share/gtk-doc/html/libanjuta/anjuta-architecture.png
   /usr/share/gtk-doc/html/libanjuta/content-block.html
+  /usr/share/gtk-doc/html/libanjuta/debugger-states.png
   /usr/share/gtk-doc/html/libanjuta/header-block.html
   /usr/share/gtk-doc/html/libanjuta/home.png
   /usr/share/gtk-doc/html/libanjuta/index.html
@@ -1028,35 +1223,12 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libanjuta/writing-plugins-sources.html
   /usr/share/gtk-doc/html/libanjuta/writing-plugins.html
 
-(glade3-anjuta)
-  /usr/lib/glade3/modules/cyggladeanjuta.dll
-  /usr/lib/glade3/modules/libgladeanjuta.la
-  /usr/share/glade3/catalogs/anjuta-glade.xml
-
 ------------------
 
 Port Notes:
 
------ version 2.24.2-1 -----
-Version bump for GNOME 2.24.
-
------ version 2.4.2-1 -----
-Version bump for GNOME 2.22.
-
------ version 2.2.2-1 -----
-Version bump.
-
------ version 2.2.1-1 -----
-Version bump.
-
------ version 2.2.0-1 -----
-Stable version bump.
-
------ version 2.1.3-1 -----
-Version bump; patches accepted upstream.
-
------ version 2.1.2-1 -----
-Initial release for Cygwin.
+----- version 2.26.1.0-1 -----
+Initial release of GNOME 2.26 for Cygwin 1.7.
 
 
 Cygwin port maintained by:

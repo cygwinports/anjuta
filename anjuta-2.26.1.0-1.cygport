@@ -1,0 +1,24 @@
+inherit gnome2
+
+DESCRIPTION="GNOME C/C++ IDE"
+HOMEPAGE="http://www.anjuta.org/"
+
+PATCH_URI="
+	2.24-glade3-plugin.patch
+	2.24-vpath.patch
+	2.26-no-undefined.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+anjuta_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/
+                 usr/lib/glade3/ usr/share/"
+anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+
+DEPS_PATH="/usr/lib/anjuta"
+
+CYGCONF_ARGS="
+	--disable-graphviz
+	--disable-plugin-valgrind
+	--with-apr-config=/usr/bin/apr-1-config
+	--with-apu-config=/usr/bin/apu-1-config
+"
