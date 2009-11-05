@@ -1,0 +1,21 @@
+--- origsrc/anjuta-2.28.1.0/configure.in	2009-10-19 11:16:40.000000000 -0500
++++ src/anjuta-2.28.1.0/configure.in	2009-11-04 17:21:08.184398100 -0600
+@@ -85,7 +85,7 @@ AC_SUBST(AM_CFLAGS)
+ 
+ ANJUTA_LDFLAGS="-no-undefined"
+ ANJUTA_PLUGIN_LDFLAGS="-module -avoid-version -no-undefined"
+-AC_SUBST(ANJUTA_LDFLAG)
++AC_SUBST(ANJUTA_LDFLAGS)
+ AC_SUBST(ANJUTA_PLUGIN_LDFLAGS)
+ 
+ dnl Disable deprecated APIs
+--- origsrc/anjuta-2.28.1.0/plugins/class-gen/Makefile.am	2009-09-26 05:05:29.000000000 -0500
++++ src/anjuta-2.28.1.0/plugins/class-gen/Makefile.am	2009-11-04 18:27:32.046549600 -0600
+@@ -30,7 +30,6 @@ AM_CPPFLAGS = \
+ 
+ libanjuta_class_gen_la_LDFLAGS = $(ANJUTA_PLUGIN_LDFLAGS)
+ 
+-#${top_builddir}/plugins/project-wizard/libanjuta-project-wizard.la \
+ libanjuta_class_gen_la_LIBADD = \
+ 	$(GIO_LIBS) \
+ 	$(LIBANJUTA_LIBS)
