@@ -5,7 +5,6 @@ HOMEPAGE="http://www.anjuta.org/"
 
 PATCH_URI="
 	2.24-glade3-plugin.patch
-	2.28-build-misc.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"
