@@ -1,5 +1,5 @@
 category: Devel Gnome
-requires: autogen GConf2 libapr1 libcairo2 libdevhelp1_1 libgcc1 libgconf2_4 libgda4.0_4 libgdk_pixbuf2.0_0 libgdl1_3 libgladeui1_9 libglib2.0_0 libgtk2.0_0 libgtksourceview2.0_0 libintl8 libpango1.0_0 libunique1.0_0 libvte9 libwebkit1.0_2 libxml2 libxslt perl perl-Locale-gettext subversion
+requires: autogen GConf2 libcairo2 libdbus-glib_1_2 libdevhelp1_1 libgcc1 libgconf2_4 libgda4.0_4 libgdk_pixbuf2.0_0 libgdl1_3 libgladeui1_9 libglib2.0_0 libgtk2.0_0 libgtksourceview2.0_0 libintl8 libpango1.0_0 libunique1.0_0 libvala0 libvte9 libwebkit1.0_2 libxml2 libxslt perl perl-Locale-gettext
 sdesc: "GNOME C/C++ IDE"
 ldesc: "Anjuta is a versatile Integrated Development Environment (IDE) 
 for C and C++ on GNU/Linux. It has been written for GTK/GNOME and 

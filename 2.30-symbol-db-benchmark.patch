@@ -1,0 +1,11 @@
+FIXME: This links against the symbol-db plugin, which doesn't export all
+the symbols required for this noinst app.
+
+--- origsrc/anjuta-2.30.2.1/plugins/symbol-db/benchmark/Makefile.am	2010-06-21 12:34:11.000000000 -0500
++++ src/anjuta-2.30.2.1/plugins/symbol-db/benchmark/Makefile.am	2010-06-29 03:22:16.980507200 -0500
+@@ -1,4 +1,4 @@
+-noinst_PROGRAMS = \
++check_PROGRAMS = \
+ 	benchmark
+ 	
+ 
