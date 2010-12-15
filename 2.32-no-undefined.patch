@@ -1,0 +1,11 @@
+--- origsrc/anjuta-2.32.1.0/libfoocanvas/Makefile.am	2010-07-09 17:19:43.000000000 -0500
++++ src/anjuta-2.32.1.0/libfoocanvas/Makefile.am	2010-12-14 22:32:40.976452800 -0600
+@@ -14,6 +14,8 @@ AM_CPPFLAGS = \
+ 
+ lib_LTLIBRARIES = libanjuta-foocanvas.la
+ 
++libanjuta_foocanvas_la_LDFLAGS = -no-undefined
++
+ libanjuta_foocanvas_la_LIBADD = \
+ 	$(ANJUTA_LIBS) \
+ 	$(RENDER_LIBS)
