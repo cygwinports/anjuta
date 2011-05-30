@@ -1,0 +1,13 @@
+--- origsrc/anjuta-3.0.2.0/libanjuta/anjuta-glade-catalog.c	2010-11-26 05:15:52.000000000 -0600
++++ src/anjuta-3.0.2.0/libanjuta/anjuta-glade-catalog.c	2011-05-29 21:20:03.272493400 -0500
+@@ -7,3 +7,10 @@
+ #include <libanjuta/anjuta-file-drop-entry.h>
+ #include <libanjuta/anjuta-entry.h>
+ 
++void glade_anjuta_init (void);
++
++void
++glade_anjuta_init() {
++	GtkWidget *entry = anjuta_entry_new ();
++	gtk_widget_destroy(entry);
++}
