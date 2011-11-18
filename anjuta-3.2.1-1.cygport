@@ -5,7 +5,7 @@ HOMEPAGE="http://www.anjuta.org/"
 
 PATCH_URI="
 	3.0-glade-plugin.patch
-	3.0-tests-build.patch
+	3.2-tests-build.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"
@@ -15,5 +15,3 @@ anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/sh
 
 DEPS_PATH="/usr/lib/anjuta"
 DIFF_EXCLUDES="libanjuta.types"
-
-MAKEOPTS+=" HTML_IMAGES= "

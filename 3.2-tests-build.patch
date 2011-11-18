@@ -1,0 +1,21 @@
+The alternative is marking symbols in the plugins G_MODULE_EXPORT.
+
+--- origsrc/anjuta-3.2.1/plugins/am-project/Makefile.am	2011-06-13 11:00:18.000000000 -0500
++++ src/anjuta-3.2.1/plugins/am-project/Makefile.am	2011-11-17 20:45:45.221187200 -0600
+@@ -92,7 +92,7 @@ am-scanner.h: am-parser.c
+ 
+ # Test program
+ 
+-noinst_PROGRAMS = projectparser
++check_PROGRAMS = projectparser
+ 
+ projectparser_SOURCES = \
+ 	projectparser.c
+--- origsrc/anjuta-3.2.1/plugins/symbol-db/benchmark/symbol-db/Makefile.am	2010-11-08 09:57:37.000000000 -0600
++++ src/anjuta-3.2.1/plugins/symbol-db/benchmark/symbol-db/Makefile.am	2011-11-17 21:54:51.098317800 -0600
+@@ -1,4 +1,4 @@
+-noinst_PROGRAMS = \
++check_PROGRAMS = \
+ 	benchmark
+ 
+ 
