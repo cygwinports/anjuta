@@ -15,3 +15,5 @@ anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/sh
 
 DEPS_PATH="/usr/lib/anjuta"
 DIFF_EXCLUDES="libanjuta.types"
+
+KEEP_LA_FILES="none"
