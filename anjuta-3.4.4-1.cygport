@@ -1,0 +1,27 @@
+inherit gnome2
+
+CATEGORY="Devel Gnome"
+SUMMARY="GNOME C/C++ IDE"
+DESCRIPTION="Anjuta is a versatile Integrated Development Environment (IDE)
+for C and C++ on GNU/Linux. It has been written for GTK/GNOME and
+features a number of advanced programming facilities. These include
+project management, application wizards, an on-board interactive
+debugger, and a powerful source editor with source browsing and syntax
+highlighting."
+HOMEPAGE="http://www.anjuta.org/"
+
+PATCH_URI="
+	3.0-glade-plugin.patch
+	3.2-tests-build.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+anjuta_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/gir*
+                 usr/lib/glade/ usr/share/"
+anjuta_devel_SUMMARY="${SUMMARY} (plugin development)"
+anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+
+DEPS_PATH="/usr/lib/anjuta"
+DIFF_EXCLUDES="libanjuta.types"
+
+KEEP_LA_FILES="none"

@@ -1,9 +1,0 @@
-category: Devel Gnome
-requires: autogen glade libcairo2 libdevhelp3_0 libgcc1 libgda5.0_4 libgdk_pixbuf2.0_0 libgdl3_2 libglib2.0_0 libgtk3_0 libgtksourceview3.0_0 libintl8 libpango1.0_0 libstdc++6 libvala0.16_0 libvte2.90_9 libwebkitgtk3.0_0 libxml2 perl perl-Locale-gettext python python-gi girepository-Gtk3.0
-sdesc: "GNOME C/C++ IDE"
-ldesc: "Anjuta is a versatile Integrated Development Environment (IDE) 
-for C and C++ on GNU/Linux. It has been written for GTK/GNOME and 
-features a number of advanced programming facilities. These include 
-project management, application wizards, an on-board interactive 
-debugger, and a powerful source editor with source browsing and syntax 
-highlighting."
