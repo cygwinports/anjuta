@@ -1,0 +1,12 @@
+--- origsrc/anjuta-3.6.2/plugins/indentation-c-style/Makefile.am	2012-09-26 15:53:47.000000000 -0500
++++ src/anjuta-3.6.2/plugins/indentation-c-style/Makefile.am	2012-12-22 21:07:45.524708600 -0600
+@@ -51,6 +51,9 @@ libanjuta_indentation_c_style_la_SOURCES
+ 
+ libanjuta_indentation_c_style_la_LDFLAGS = $(ANJUTA_PLUGIN_LDFLAGS)
+ 
++# Plugin dependencies
++libanjuta_indentation_c_style_la_LIBADD = $(LIBANJUTA_LIBS)
++
+ gsettings_in_file = org.gnome.anjuta.plugins.indent-c.gschema.xml.in
+ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+ @INTLTOOL_XML_NOMERGE_RULE@

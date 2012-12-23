@@ -1,6 +1,9 @@
-inherit gnome2
+inherit gnome2 python
 
-CATEGORY="Devel Gnome"
+NAME="anjuta"
+VERSION=3.6.2
+RELEASE=1
+CATEGORY="Devel GNOME"
 SUMMARY="GNOME C/C++ IDE"
 DESCRIPTION="Anjuta is a versatile Integrated Development Environment (IDE)
 for C and C++ on GNU/Linux. It has been written for GTK/GNOME and
@@ -13,15 +16,16 @@ HOMEPAGE="http://www.anjuta.org/"
 PATCH_URI="
 	3.0-glade-plugin.patch
 	3.2-tests-build.patch
+	3.6-no-undefined.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"
 anjuta_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/gir*
                  usr/lib/glade/ usr/share/"
 anjuta_devel_SUMMARY="${SUMMARY} (plugin development)"
-anjuta_devel_CONTENTS='usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+anjuta_devel_CONTENTS="usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/" # usr/share/gtk-doc/'
 
 DEPS_PATH="/usr/lib/anjuta"
 DIFF_EXCLUDES="libanjuta.types"
 
-KEEP_LA_FILES="none"
+CYGCONF_ARGS="ac_ct_CXX=${CXX} --disable-gtk-doc"
