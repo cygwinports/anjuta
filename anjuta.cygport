@@ -2,7 +2,7 @@ inherit gnome2 python
 
 NAME="anjuta"
 VERSION=3.6.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel GNOME"
 SUMMARY="GNOME C/C++ IDE"
 DESCRIPTION="Anjuta is a versatile Integrated Development Environment (IDE)
