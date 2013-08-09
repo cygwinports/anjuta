@@ -1,9 +1,9 @@
 inherit gnome2 python
 
 NAME="anjuta"
-VERSION=3.6.2
-RELEASE=2
-CATEGORY="Devel GNOME"
+VERSION=3.8.4
+RELEASE=1
+CATEGORY="Devel"
 SUMMARY="GNOME C/C++ IDE"
 DESCRIPTION="Anjuta is a versatile Integrated Development Environment (IDE)
 for C and C++ on GNU/Linux. It has been written for GTK/GNOME and
@@ -19,9 +19,9 @@ PATCH_URI="
 	3.6-no-undefined.patch
 "
 
-PKG_NAMES="${PN} ${PN}-devel"
+PKG_NAMES="anjuta anjuta-devel"
 anjuta_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/gir*
-                 usr/lib/glade/ usr/share/"
+                 usr/share/"
 anjuta_devel_SUMMARY="${SUMMARY} (plugin development)"
 anjuta_devel_CONTENTS="usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/" # usr/share/gtk-doc/'
 
