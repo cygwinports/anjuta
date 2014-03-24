@@ -1,0 +1,12 @@
+--- origsrc/anjuta-3.10.2/configure.ac  2013-11-12 15:17:07.000000000 -0600
++++ src/anjuta-3.10.2/configure.ac      2014-03-24 00:00:58.298085500 -0500
+@@ -424,8 +424,7 @@ dnl Internatinalization
+ dnl ***************************************************************************
+ IT_PROG_INTLTOOL([0.40.1])
+ 
+-AM_GNU_GETTEXT([external])
+-AM_GNU_GETTEXT_VERSION([0.17])
++AM_GLIB_GNU_GETTEXT
+ 
+ GETTEXT_PACKAGE=anjuta
+ AC_SUBST(GETTEXT_PACKAGE)
