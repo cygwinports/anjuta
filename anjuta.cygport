@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="anjuta"
-VERSION=3.8.4
+VERSION=3.10.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GNOME C/C++ IDE"
@@ -14,7 +14,6 @@ highlighting."
 HOMEPAGE="http://www.anjuta.org/"
 
 PATCH_URI="
-	3.0-glade-plugin.patch
 	3.2-tests-build.patch
 	3.6-no-undefined.patch
 "
