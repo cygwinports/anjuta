@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="anjuta"
-VERSION=3.14.0
+VERSION=3.14.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GNOME C/C++ IDE"
