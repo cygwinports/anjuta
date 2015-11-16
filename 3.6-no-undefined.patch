@@ -12,25 +12,3 @@ plugins for GtkBuilder
  AC_SUBST(LIBANJUTA_CFLAGS)
  AC_SUBST(LIBANJUTA_LIBS)
  
---- origsrc/anjuta-3.6.2/plugins/indentation-c-style/Makefile.am	2012-09-26 15:53:47.000000000 -0500
-+++ src/anjuta-3.6.2/plugins/indentation-c-style/Makefile.am	2012-12-22 21:07:45.524708600 -0600
-@@ -51,6 +51,9 @@ libanjuta_indentation_c_style_la_SOURCES
- 
- libanjuta_indentation_c_style_la_LDFLAGS = $(ANJUTA_PLUGIN_LDFLAGS)
- 
-+# Plugin dependencies
-+libanjuta_indentation_c_style_la_LIBADD = $(LIBANJUTA_LIBS)
-+
- gsettings_in_file = org.gnome.anjuta.plugins.indent-c.gschema.xml.in
- gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
- @INTLTOOL_XML_NOMERGE_RULE@
---- origsrc/anjuta-3.8.4/plugins/jhbuild/Makefile.am	2013-06-03 15:57:12.000000000 -0500
-+++ src/anjuta-3.8.4/plugins/jhbuild/Makefile.am	2013-08-09 03:51:03.330223900 -0500
-@@ -39,6 +39,7 @@ libanjuta_jhbuild_la_SOURCES = \
- 
- libanjuta_jhbuild_la_LDFLAGS = $(ANJUTA_PLUGIN_LDFLAGS)
- 
-+libanjuta_jhbuild_la_LIBADD = $(LIBANJUTA_LIBS)
- 
- EXTRA_DIST = \
- 	$(plugin_in_files) \

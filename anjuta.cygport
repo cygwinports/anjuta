@@ -1,8 +1,8 @@
 inherit gnome2 python
 
 NAME="anjuta"
-VERSION=3.14.1
-RELEASE=2
+VERSION=3.18.2
+RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GNOME C/C++ IDE"
 DESCRIPTION="Anjuta is a versatile Integrated Development Environment (IDE)
@@ -19,13 +19,29 @@ PATCH_URI="
 	3.10-glib-gettext.patch
 "
 
-PKG_NAMES="anjuta anjuta-devel"
-anjuta_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/anjuta/ usr/lib/gir*
-                 usr/share/"
-anjuta_devel_SUMMARY="${SUMMARY} (plugin development)"
-anjuta_devel_CONTENTS="usr/include/ usr/lib/libanjuta* usr/lib/pkgconfig/" # usr/share/gtk-doc/'
+PKG_NAMES="anjuta libanjuta3_0 libanjuta3-devel libanjuta3-doc girepository-Anjuta3.0"
+anjuta_REQUIRES="girepository-Anjuta3.0"
+anjuta_CONTENTS="--exclude=gir-1.0 --exclude=gtk-doc etc/ usr/bin/anjuta* usr/lib/anjuta/ usr/share/" libanjuta3_0_CATEGORY="Libs" 
+libanjuta3_0_CATEGORY="Libs"
+libanjuta3_0_SUMMARY="${SUMMARY} library"
+libanjuta3_0_CONTENTS="usr/bin/cyganjuta-3-0.dll"
+libanjuta3_devel_CATEGORY="Libs"
+libanjuta3_devel_SUMMARY=${libanjuta3_0_SUMMARY}
+libanjuta3_devel_OBSOLETES="anjuta-devel"
+libanjuta3_devel_REQUIRES="girepository-Anjuta3.0"
+libanjuta3_devel_CONTENTS="
+	usr/include/libanjuta-3.0/
+	usr/lib/libanjuta-3.dll.a
+	usr/lib/pkgconfig/libanjuta-3.0.pc
+"
+libanjuta3_doc_CATEGORY="Doc"
+libanjuta3_doc_SUMMARY="${SUMMARY} library (API documentation)"
+libanjuta3_doc_CONTENTS="usr/share/gtk-doc/html/libanjuta/"
+girepository_Anjuta3_0_CATEGORY="Libs"
+girepository_Anjuta3_0_SUMMARY=${libanjuta3_0_SUMMARY}
+girepository_Anjuta3_0_CONTENTS="usr/*/gir*-1.0/*Anjuta-3.0.*"
 
 DEPS_PATH="/usr/lib/anjuta"
 DIFF_EXCLUDES="libanjuta.types"
 
-CYGCONF_ARGS="ac_ct_CXX=${CXX} --disable-gtk-doc"
+CYGCONF_ARGS="ac_ct_CXX=${CXX}"
